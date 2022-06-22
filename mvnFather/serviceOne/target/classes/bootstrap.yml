@@ -1,0 +1,21 @@
+nacos:
+  server: 127.0.0.1
+spring:
+  application:
+    name: serviceOne
+  cloud:
+    nacos:
+      logging:
+        level:
+          com.alibaba.nacos.client.*: WARN
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+      config:
+        server-addr: 127.0.0.1:8848
+        shared-dataids: common-config-one.yml
+        file-extension: yml
+        refreshable-dataids: common-config-one.yml
+        username: nacos
+        password: nacos
